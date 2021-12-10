@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+
+    <nav id="navbar">
+      <header>
+       Java Documentation
+        <i class="fab fa-java"></i> 
+      </header> 
+      <a href="#welcome" class="btn" class="nav-link">Welcome</a>
+      <a href="#HELLO,_WORLD!" class="btn" class="nav-link">Hello, World!</a>
+      <a href="#variables_and_types" class="btn" class="nav-link">Variables and Types</a>
+      <a href="#conditionals" class="btn" class="nav-link">Conditionals</a>
+      <a href="#arrays" class="btn" class="nav-link">Arrays</a>
+      <a href="#loops" class="btn" class="nav-link">Loops</a>
+      <a href="#functions" class="btn" class="nav-link">Functions</a>
+      <a href="#objects" class="btn" class="nav-link">Objects</a>
+      <a href="#compiling_and_running_with_arguments" class="btn" class="nav-link">Compiling and Running with Arguments</a>      
+    </nav>
+    
+    <main id="main-doc">
+      <section class="main-section" id="welcome">
+        <header>Welcome</header>
+        <div id="inner-text">
+    <p>Welcome to the LearnJavaOnline.org Interactive Java Tutorial.</p>
+    <p>Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Java programming language.</p>
+    <p>Just click on the chapter you wish to begin from, and follow the instructions. Good luck!</p>
+    <h3>Learn the Basics</h3>
+    </ul>
+    </div>
+      </section>
+      
+      <section class="main-section" id="HELLO,_WORLD!">
+        <header>Hello, World!</header>
+        <div id="inner-text">
+        <hr>
+    
+    <p>Java is an object oriented language (OOP). Java objects are part of so-called "Java classes".</p>
+    <p>Let's go over the Hello world program, which simply prints "Hello, World!" to the screen.</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"This will be printed"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>The first line defines a class called Main.</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+    </code></pre>
+    <p>In Java, every line of code that can actually run needs to be inside a class. This line declares a class named <code class="  language-java">Main</code>, which is <code class="  language-java"><span class="token keyword">public</span></code>, that means that any other class can access it. This is not important for now, so don't worry. For now, we'll just write our code in a class called Main, and talk about objects later on.</p>
+    <p>Notice that when we declare a public class, we must declare it inside a file with the same name (Main.java), otherwise we'll get an error when compiling.</p>
+    <p>When running the examples on the site, we will not use the public keyword, since we write all our code in one file.</p>
+    <p>The next line is:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    </code></pre>
+    <p>This is the entry point of our Java program. the main method has to have this exact signature in order to be able to run our program.</p>
+    <ul>
+    <li><code class="  language-java"><span class="token keyword">public</span></code> again means that anyone can access it.</li>
+    <li><code class="  language-java"><span class="token keyword">static</span></code> means that you can run this method without creating an instance of <code class="  language-java">Main</code>.</li>
+    <li><code class="  language-java"><span class="token keyword">void</span></code> means that this method doesn't return any value.</li>
+    <li><code class="  language-java">main</code> is the name of the method.</li>
+    </ul>
+    <p>The arguments we get inside the method are the arguments that we will get when running the program with parameters. It's an array of strings. We will use it in our next lesson, so don't worry if you don't understand it all now.</p>
+    <pre class="  language-java"><code class="  language-java">System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"This will be printed"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </code></pre>
+    <ul>
+    <li><code class="  language-java">System</code> is a pre-defined class that Java provides us and it holds some useful methods and variables.</li>
+    <li><code class="  language-java">out</code> is a static variable within System that represents the output of your program (stdout).</li>
+    <li><code class="  language-java">println</code> is a method of out that can be used to print a line.</li>
+    </ul>
+    </div>
+      </section>
+      
+      <section class="main-section" id="variables_and_types">
+        <header>Variables and Types</header>
+        
+        <div id="inner-text">
+                
+        <hr>
+    
+    <p>Although Java is object oriented, not all types are objects. It is built on top of basic variable types called primitives.</p>
+    <p>Here is a list of all primitives in Java:</p>
+    <ul>
+    <li><code class="  language-java"><span class="token keyword">byte</span></code> (number, 1 byte)</li>
+    <li><code class="  language-java"><span class="token keyword">short</span></code> (number, 2 bytes)</li>
+    <li><code class="  language-java"><span class="token keyword">int</span></code> (number, 4 bytes)</li>
+    <li><code class="  language-java"><span class="token keyword">long</span></code> (number, 8 bytes)</li>
+    <li><code class="  language-java"><span class="token keyword">float</span></code> (float number, 4 bytes)</li>
+    <li><code class="  language-java"><span class="token keyword">double</span></code> (float number, 8 bytes)</li>
+    <li><code class="  language-java"><span class="token keyword">char</span></code> (a character, 2 bytes)</li>
+    <li><code class="  language-java"><span class="token keyword">boolean</span></code> (true or false, 1 byte)</li>
+    </ul>
+    <p>Java is a strong typed language, which means variables need to be defined before we use them.</p>
+    <h3>Numbers</h3>
+    <p>To declare and assign a number use the following syntax:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> myNumber<span class="token punctuation">;</span>
+    myNumber <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>Or you can combine them:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> myNumber <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>To define a double floating point number, use the following syntax:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">double</span> d <span class="token operator">=</span> <span class="token number">4.5</span><span class="token punctuation">;</span>
+    d <span class="token operator">=</span> <span class="token number">3.0</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>If you want to use float, you will have to cast:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">float</span> f <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span> <span class="token number">4.5</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>Or, You can use this:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">float</span> f <span class="token operator">=</span> <span class="token number">4.5f</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// (f is a shorter way of casting float)</span>
+    </code></pre>
+    <h3>Characters and Strings</h3>
+    <p>In Java, a character is it's own type and it's not simply a number, so it's not common to put an ascii value in it, there is a special syntax for chars:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">char</span> c <span class="token operator">=</span> <span class="token string">'g'</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p><code class="  language-java">String</code> is not a primitive. It's a real type, but Java has special treatment for String.</p>
+    <p>Here are some ways to use a string:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token comment" spellcheck="true">// Create a string with a constructor</span>
+    String s1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"Who let the dogs out?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// String object stored in heap memory</span>
+    <span class="token comment" spellcheck="true">// Just using "" creates a string, so no need to write it the previous way.</span>
+    String s2 <span class="token operator">=</span> <span class="token string">"Who who who who!"</span><span class="token punctuation">;</span>                         <span class="token comment" spellcheck="true">// String literal stored in String pool</span>
+    <span class="token comment" spellcheck="true">// Java defined the operator + on strings to concatenate:</span>
+    String s3 <span class="token operator">=</span> s1 <span class="token operator">+</span> s2<span class="token punctuation">;</span>
+    </code></pre>
+    <p>There is no operator overloading in Java but there is the exception that proves the rule - string is the only class where operator overloading is supported. We can concat two strings using + operator. The operator <code class="  language-java"><span class="token operator">+</span></code> is only defined for strings, you will never see it with other objects, only primitives.</p>
+    <p>You can also concat string to primitives:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    String s <span class="token operator">=</span> <span class="token string">"I have "</span> <span class="token operator">+</span> num <span class="token operator">+</span> <span class="token string">" cookies"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Be sure not to use "" with primitives.</span>
+    </code></pre>
+    <h3>boolean</h3>
+    <p>Every comparison operator in java will return the type boolean. Unlike other languages, it only accepts two special values: <code class="  language-java"><span class="token boolean">true</span></code> or <code class="  language-java"><span class="token boolean">false</span></code>. </p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">boolean</span> b <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    b <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">boolean</span> toBe <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    b <span class="token operator">=</span> toBe <span class="token operator">||</span> <span class="token operator">!</span>toBe<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>toBe<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">int</span> children <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    b <span class="token operator">=</span> children<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Will not work</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>children<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// Will not work</span>
+    <span class="token comment" spellcheck="true">// Will not work</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">boolean</span> b <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> 
+    <span class="token keyword">boolean</span> c <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> 
+    a <span class="token operator">=</span> b <span class="token operator">+</span> c<span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//The following line will give an error</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </code></pre>
+    </div>
+        
+      </section>
+      
+      <section class="main-section" id="conditionals">
+        <header>Conditionals</header>
+        
+        <div id="inner-text">
+    
+        <hr>
+    
+    <p>Java uses boolean variables to evaluate conditions. The boolean values <code class="  language-java"><span class="token boolean">true</span></code> and <code class="  language-java"><span class="token boolean">false</span></code> are returned when an expression is compared or evaluated.
+    For example:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token keyword">boolean</span> b <span class="token operator">=</span> a <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"It's true!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>Of course we don't normally assign a conditional expression to a boolean. Normally, we just use the short version:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Ohhh! So a is 4!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <h3>Boolean operators</h3>
+    <p>There aren't that many operators to use in conditional statements and most of them are pretty straight forward:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token keyword">boolean</span> result<span class="token punctuation">;</span>
+    result <span class="token operator">=</span> a <span class="token operator">&lt;</span> b<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
+    result <span class="token operator">=</span> a <span class="token operator">&gt;</span> b<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
+    result <span class="token operator">=</span> a <span class="token operator">&lt;=</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a smaller or equal to 4 - true</span>
+    result <span class="token operator">=</span> b <span class="token operator">&gt;=</span> <span class="token number">6</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// b bigger or equal to 6 - false</span>
+    result <span class="token operator">=</span> a <span class="token operator">==</span> b<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a equal to b - false</span>
+    result <span class="token operator">=</span> a <span class="token operator">!=</span> b<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a is not equal to b - true</span>
+    result <span class="token operator">=</span> a <span class="token operator">&gt;</span> b <span class="token operator">||</span> a <span class="token operator">&lt;</span> b<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Logical or - true</span>
+    result <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">&lt;</span> a <span class="token operator">&amp;&amp;</span> a <span class="token operator">&lt;</span> <span class="token number">6</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Logical and - true</span>
+    result <span class="token operator">=</span> <span class="token operator">!</span>result<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Logical not - false</span>
+    </code></pre>
+    <h3>if - else and between</h3>
+    <p>The if, else statement in Java is pretty simple.</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// a and b are equal, let's do something cool</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>And we can also add an else statement after an if, to do something if the condition is not true</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// We already know this part</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// a and b are not equal... :/</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>The if - else statements doesn't have to be in several lines with {}, if can be used in one line, or without the {}, for a single line statment.</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> b<span class="token punctuation">)</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Another line Wow!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Double rainbow!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>Although this method might be useful for making your code shorter by using fewer lines, we strongly recommend for beginners not to use this short version of statements and to always use the full version with {}. This goes to every statement that can be shorted to a single line (for, while, etc).</p>
+    <h3>The ugly side of if</h3>
+    <p>There is a another way to write a one line if - else statement by using the operator ? :</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> result <span class="token operator">=</span> a <span class="token operator">==</span> <span class="token number">4</span> <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    
+    <span class="token comment" spellcheck="true">// result will be 1</span>
+    <span class="token comment" spellcheck="true">// This is equivalent to</span>
+    <span class="token keyword">int</span> result<span class="token punctuation">;</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    result <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    result <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>Again, we strongly recommend for beginners not to use this version of if.</p>
+    <h3>== and equals</h3>
+    <p>The operator <code class="  language-java"><span class="token operator">==</span></code> works a bit different on objects than on primitives.
+    When we are using objects and want to check if they are equal, the operator <code class="  language-java"><span class="token operator">==</span></code> will say if they are the same, if you want to check if they are logically equal, you should use the <code class="  language-java">equals</code> method on the object. For example:</p>
+    <pre class="  language-java"><code class="  language-java">String a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"Wow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    String b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"Wow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    String sameA <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    
+    <span class="token keyword">boolean</span> r1 <span class="token operator">=</span> a <span class="token operator">==</span> b<span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">// This is false, since a and b are not the same object</span>
+    <span class="token keyword">boolean</span> r2 <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// This is true, since a and b are logically equals</span>
+    <span class="token keyword">boolean</span> r3 <span class="token operator">=</span> a <span class="token operator">==</span> sameA<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// This is true, since a and sameA are really the same object</span>
+    </code></pre>
+    </div>
+        
+      </section>
+      
+      <section class="main-section" id="arrays">
+        <header>Arrays</header>
+       <div id="inner-text">
+                    
+        <hr>
+    
+    <p>Arrays in Java are also objects. They need to be declared and then created.
+    In order to declare a variable that will hold an array of integers, we use the following syntax:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">;</span>
+    </code></pre>
+    <p>Notice there is no size, since we didn't create the array yet.</p>
+    <pre class="  language-java"><code class="  language-java">arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>This will create a new array with the size of 10. We can check the size by printing the array's length:</p>
+    <pre class="  language-java"><code class="  language-java">System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>We can access the array and set values:</p>
+    <pre class="  language-java"><code class="  language-java">arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>Java arrays are 0 based, which means the first element in an array is accessed at index 0 (e.g: arr[0], which
+    accesses the first element). Also, as an example, an array of size 5 will only go up to index 4 due to it being 0 based.</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//accesses and sets the first element</span>
+    arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>We can also create an array with values in the same line:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>Don't try to print the array without a loop, it will print something nasty like [I@f7e6a96. 
+    To print out an array, use the following code:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    </div>
+      </section>
+      
+      <section class="main-section" id="loops">
+        <header>Loops</header>
+        <div id="inner-text">
+                    
+        <hr>
+    
+    <p>There are two kind of loops in Java, <code class="  language-java"><span class="token keyword">for</span></code> and <code class="  language-java"><span class="token keyword">while</span></code>.</p>
+    <h3>For</h3>
+    <p>The for loop has three sections:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    </code></pre>
+    <p>First section runs once when we enter the loop.</p>
+    <p>Second section is the gate keeper, if it returns <code class="  language-java"><span class="token boolean">true</span></code>, we run the statements in the loop, if it returns <code class="  language-java"><span class="token boolean">false</span></code>, we exit the loop. It runs right after the first section for the first time, then every time the loop is finished and the third section is run.</p>
+    <p>The third section is the final statement that will run every time the loop runs.</p>
+    <p>So in the case we have just seen, the loop will run 3 times. Here is the order of the commands:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    i <span class="token operator">&lt;</span> <span class="token number">3</span> <span class="token comment" spellcheck="true">// 0 &lt; 3 = true</span>
+    <span class="token comment" spellcheck="true">// Inside of loop</span>
+    i<span class="token operator">++</span> <span class="token comment" spellcheck="true">// i is now 1</span>
+    i <span class="token operator">&lt;</span> <span class="token number">3</span> <span class="token comment" spellcheck="true">// 1 &lt; 3 = true</span>
+    <span class="token comment" spellcheck="true">// Inside of loop</span>
+    i<span class="token operator">++</span> <span class="token comment" spellcheck="true">// i is now 2</span>
+    i <span class="token operator">&lt;</span> <span class="token number">3</span> <span class="token comment" spellcheck="true">// 2 &lt; 3 = true</span>
+    <span class="token comment" spellcheck="true">// Inside of loop</span>
+    i<span class="token operator">++</span> <span class="token comment" spellcheck="true">// i is now 3</span>
+    i <span class="token operator">&lt;</span> <span class="token number">3</span> <span class="token comment" spellcheck="true">// 3 &lt; 3 = false</span>
+    <span class="token comment" spellcheck="true">// Loop is done...</span>
+    </code></pre>
+    <p>We can omit the first and third section of the loop (although it will be weird), and the loop will still work:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    </code></pre>
+    <p>For cases where we want to use a loop that look like that, we use a <code class="  language-java"><span class="token keyword">while</span></code> loop</p>
+    <h3>While</h3>
+    <p>The syntax is very similar to the previous for we looked at:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">while</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    </code></pre>
+    <p>The condition will run for the first time when entering and every time the loop is done.
+    If it returns false, the loop will not run.</p>
+    <p>If we want the loop to always run at least one, we can use do-while</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">do</span> <span class="token punctuation">{</span>
+    
+    <span class="token punctuation">}</span> <span class="token keyword">while</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>Notice the <code class="  language-java"><span class="token punctuation">;</span></code> in the end of the do-while.</p>
+    <h3>Foreach</h3>
+    <p>Another version of for, is the foreach. The keyword we use is still <code class="  language-java"><span class="token keyword">for</span></code>, but when we want to iterate on the elements inside an array we can simply use it:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> el <span class="token operator">:</span> arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>This is a short version and equivalent to:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> el <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>Notice that if you want to use the index of the element inside the loop, you have to use the longer version and can't use foreach.</p>
+    <h3>break and continue</h3>
+    <p>These two keywords help us control the loop from within it.
+    <code class="  language-java"><span class="token keyword">break</span></code> will cause the loop to stop and will go immediately to the next statement after the loop:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&gt;=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Yuhu"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// Output:</span>
+    <span class="token comment" spellcheck="true">// Yuhu</span>
+    <span class="token comment" spellcheck="true">// Yuhu</span>
+    <span class="token comment" spellcheck="true">// 2</span>
+    </code></pre>
+    <p><code class="  language-java"><span class="token keyword">continue</span></code> will stop the current iteration and will move to the next one. Notice that inside a for loop, it will still run the third section.</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&gt;=</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Yuhu"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&gt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">continue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Tata"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// Output</span>
+    <span class="token comment" spellcheck="true">// Yuhu</span>
+    <span class="token comment" spellcheck="true">// Tata</span>
+    <span class="token comment" spellcheck="true">// Yuhu</span>
+    <span class="token comment" spellcheck="true">// Yuhu</span>
+    <span class="token comment" spellcheck="true">// 3</span>
+    </code></pre>
+    
+    </div>
+      </section>
+      
+      <section class="main-section" id="functions">
+        <header>Functions</header>
+        <div id="inner-text">
+                    
+        <hr>
+    
+    <p>In Java, all function definitions must be inside classes. We also call functions methods. Let's look at an example method</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// Do something here</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p><code class="  language-java">foo</code> is a method we defined in class Main. Notice a few things about <code class="  language-java">foo</code>.</p>
+    <ul>
+    <li><code class="  language-java"><span class="token keyword">static</span></code> means this method belongs to the class Main and not to a specific instance of Main. Which means we can call the method from a different class like that <code class="  language-java">Main<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code>.</li>
+    <li><code class="  language-java"><span class="token keyword">void</span></code> means this method doesn't return a value. Methods can return a single value in Java and it has to be defined in the method declaration. However, you can use <code class="  language-java"><span class="token keyword">return</span></code> by itself to exit the method.</li>
+    <li>This method doesn't get any arguments, but of course Java methods can get arguments as we'll see further on.</li>
+    </ul>
+    <h3>Arguments</h3>
+    <p>I always like to say that arguments to Java methods are passed by value, although some might disagree with my choice of words, I find it the best way to explain and understand how it works exactly.</p>
+    <p>By value means that arguments are copied when the method runs. Let's look at an example.</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token keyword">int</span> num1<span class="token punctuation">,</span> <span class="token keyword">int</span> num2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>Here is a another place in the code, where bar is called</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token function">bar</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>You can picture in your head that when <code class="  language-java"><span class="token function">bar</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span></code> is run, it's like in the beginning of <code class="  language-java">bar</code> the following two lines are written:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">int</span> num1 <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> num2 <span class="token operator">=</span> b<span class="token punctuation">;</span>
+    </code></pre>
+    <p>And only then the rest of the method is run.</p>
+    <p>This means that <code class="  language-java">a</code> value get copied to <code class="  language-java">num1</code> and <code class="  language-java">b</code> value get copied to <code class="  language-java">num2</code>. Changing the values of <code class="  language-java">num1</code> and <code class="  language-java">num2</code> will not affect <code class="  language-java">a</code> and <code class="  language-java">b</code>.</p>
+    <p>If the arguments were objects, the rules remain the same, but it acts a bit differently. Here is a an example:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">bar2</span><span class="token punctuation">(</span>Student s1<span class="token punctuation">,</span> Student s2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>And here is how we use it</p>
+    <pre class="  language-java"><code class="  language-java">Student joe <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">"joe"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Student jack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">"jack"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">bar2</span><span class="token punctuation">(</span>joe<span class="token punctuation">,</span> jack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>Again we can picture the same two lines in the beginning of <code class="  language-java">bar2</code></p>
+    <pre class="  language-java"><code class="  language-java">Student s1 <span class="token operator">=</span> joe<span class="token punctuation">;</span>
+    Student s2 <span class="token operator">=</span> jack<span class="token punctuation">;</span>
+    </code></pre>
+    <p>But when we assign objects, it's a bit different than assigning primitives. <code class="  language-java">s1</code> and <code class="  language-java">joe</code> are two different references to the same object. <code class="  language-java">s1 <span class="token operator">==</span> joe</code> is true. This means that running methods on <code class="  language-java">s1</code> will change the object <code class="  language-java">joe</code>. But if we'll change the value of <code class="  language-java">s1</code> as a reference, it will not affect the reference <code class="  language-java">joe</code>.</p>
+    <pre class="  language-java"><code class="  language-java">s1<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"Chuck"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// joe name is now Chuck as well</span>
+    s1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">"Norris"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// s1 is a new student, different than joe with the name of Norris</span>
+    <span class="token comment" spellcheck="true">// s1 == joe   is not true anymore</span>
+    </code></pre>
+    <h3>Non static methods</h3>
+    <p>Non static methods in Java are used more than static methods. Those methods can only be run on objects and not on the whole class.</p>
+    <p>Non static methods can access and alter the field of the object.</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span>String name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>Calling the methods will require an object of type <code class="  language-java">Student</code>.</p>
+    <pre class="  language-java"><code class="  language-java">Student s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    s<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"Danielle"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    String name <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    Student<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"Bob"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Will not work!</span>
+    Student<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Will not work!</span>
+    </code></pre>
+    <h3>Summary</h3>
+    <ul>
+    <li>Every Java method has to be within a class</li>
+    <li>Static methods belong to a class while non-static methods belong to objects</li>
+    <li>All parameters to functions are passed by value, primitives content is copied, while objects are not copied and some would say 'passed by reference'</li>
+    </ul>
+    </div>
+      </section>
+      
+        <section class="main-section" id="objects">
+        <header>Objects</header>
+          <div id="inner-text">
+                    
+                        <h1>Objects</h1>
+                        <hr>
+                    
+                    <p>Everything in Java is within classes and objects. Java objects hold a state, state are variables which are saved together within an object, we call them fields or member variables.</p>
+    <p>Let start with an example:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">class</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> x<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> y<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>This class defined a point with x and y values.</p>
+    <p>In order to create an instance of this class, we need to use the keyword <code class="  language-java"><span class="token keyword">new</span></code>.</p>
+    <pre class="  language-java"><code class="  language-java">Point p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </code></pre>
+    <p>In this case, we used a default constructor (constructor that doesn't get arguments) to create a Point. All classes that don't explicitly define a constructor has a default constructor that does nothing.</p>
+    <p>We can define our own constructor:</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">class</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> x<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> y<span class="token punctuation">;</span>
+    
+        <span class="token function">Point</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">=</span> x<span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>y <span class="token operator">=</span> y<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>This means we can not longer use the default constructor <code class="  language-java"><span class="token keyword">new</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code>. We can now only use the defined constructor <code class="  language-java"><span class="token keyword">new</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span></code>.</p>
+    <p>We can define more than one constructor, so <code class="  language-java">Point</code> can be created in several ways. Let's define the default constructor again.</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">class</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> x<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> y<span class="token punctuation">;</span>
+    
+        <span class="token function">Point</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    
+        <span class="token function">Point</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">=</span> x<span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>y <span class="token operator">=</span> y<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>Notice the usage of the <code class="  language-java"><span class="token keyword">this</span></code> keyword here. We can use it within a constructor to call a different constructor (in order to avoid code duplication). It can only be the first line within the constructor.</p>
+    <p>We also used the <code class="  language-java"><span class="token keyword">this</span></code> keyword as a reference of the current object we are running on.</p>
+    <p>After we defined <code class="  language-java">p</code> we can access <code class="  language-java">x</code> and <code class="  language-java">y</code>.</p>
+    <pre class="  language-java"><code class="  language-java">p<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    p<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    </code></pre>
+    <h3>Methods</h3>
+    <p>We can now define methods on <code class="  language-java">Point</code>.</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">class</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token comment" spellcheck="true">// Our code previously</span>
+        <span class="token keyword">void</span> <span class="token function">printPoint</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"("</span> <span class="token operator">+</span> x <span class="token operator">+</span> <span class="token string">","</span> <span class="token operator">+</span> y <span class="token operator">+</span> <span class="token string">")"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    
+        Point <span class="token function">center</span><span class="token punctuation">(</span>Point other<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// Returns the center between this point the other point</span>
+            <span class="token comment" spellcheck="true">// Notice we are using integer, we won't get an accurate value</span>
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">+</span> other<span class="token punctuation">.</span>x<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>y <span class="token operator">+</span> other<span class="token punctuation">.</span>y<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <h3>Public and Private</h3>
+    <p>Although we'll talk about modifiers later on, it's important to understand the different between private and public variables and methods.</p>
+    <p>When using the keyword <code class="  language-java"><span class="token keyword">private</span></code> before a variable or a method, it means only the class itself can access the variable or method, when we're using <code class="  language-java"><span class="token keyword">public</span></code> it means everybody can access it. We usually see constructors defined as public, variables defined as private and methods are separated, some public and some private.</p>
+    <h2>Exercise</h2>
+    <p>Write a new method in Point called <code class="  language-java">scale</code>, that will make the point closer by half to (0,0). So for example, point (8, 4) after scale will be (4, 2).</p>
+                </div>
+      </section>
+      
+      <section class="main-section" id="compiling_and_running_with_arguments">
+        <header>Compiling and Running with Arguments</header>
+       <div id="inner-text">
+                    
+        <hr>
+    
+    <p>This section is used for you to use Java at home and understand the basics of how things are done.</p>
+    <p>After creating a simple application that prints something to the screen, you need to compile your code and run it.</p>
+    <p>It shouldn't really matter if you use Linux, Mac or Windows. You need to have a console and you need to have the following commands available in order to compile and run Java.</p>
+    <ul>
+    <li>java (or java.exe)</li>
+    <li>javac (or javac.exe)</li>
+    </ul>
+    <p>In order for those to be available you must download and install JDK (Java Development Kit).</p>
+    <p>If we take the code from the previous lesson and put it in a file called MyFirstClass.java, in order to compile it we need to run:</p>
+    <pre class="  language-java"><code class="  language-java">javac MyFirstClass<span class="token punctuation">.</span>java
+    </code></pre>
+    <p>This will create a file called MyFirstClass.class that holds the compiled java code.</p>
+    <p>To run it, we need to run java with the name of the class as the argument (Not the file!)</p>
+    <h5>Wrong</h5>
+    <pre class="  language-java"><code class="  language-java">java MyFirstClass<span class="token punctuation">.</span><span class="token keyword">class</span>
+    </code></pre>
+    <h5>Right!</h5>
+    <pre class="  language-java"><code class="  language-java">java MyFirstClass
+    </code></pre>
+    <h3>Arguments</h3>
+    <p>The main methods get an array of strings as an argument, these are the command line arguments you may pass to your program.</p>
+    <p>Every array in java holds a variable called length that says how many elements are within that array.</p>
+    <p>We can go over the arguments with a simple for</p>
+    <pre class="  language-java"><code class="  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Arguments</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> args<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>args<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    </code></pre>
+    <p>And to compile and run it with arguments:</p>
+    <pre class="  language-java"><code class="  language-java">javac Arguments<span class="token punctuation">.</span>java
+    java Arguments arg0 arg1 arg2
+    </code></pre>
+    </div>
+      </section>
+      
+    </main>
+    <script src="https://kit.fontawesome.com/aca01c9e11.js" crossorigin="anonymous"></script>
+    </body>
+</html>
